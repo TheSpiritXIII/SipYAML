@@ -1,5 +1,5 @@
 SipYAML
-==========
+=======
 SipYAML is a C++ library than aims to implement a fast in-situ DOM parser
 capable of reading and writing a simplified YAML specification.
 
@@ -39,7 +39,7 @@ FAQs
  example). Escaping, anchors, tags, casts and other various tokens are not
  implemented and may not be implemented (unless I receive enough requests).
 
- NOTE: As of the current version, document end markers are not implemented.
+ NOTE: As of the current version, errors are still not implemented.
  
  2. What is in-situ?
  

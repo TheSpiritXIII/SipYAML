@@ -16,19 +16,19 @@ int main()
 	preprocessor->setValue("1.2", sizeof("1.2") - 1);
 	document.appendNode(preprocessor);
 	
-	Sip::YAMLDocumentUTF8::Node *docBeginNode = document.allocateNode(Sip::DocBegin);
+	Sip::YAMLDocumentUTF8::Node *docBeginNode = document.allocateNode(Sip::Begin);
 	document.appendNode(docBeginNode);
 	
-	Sip::YAMLDocumentUTF8::Node *invokeNode = document.allocateNode(Sip::MapElement);
+	Sip::YAMLDocumentUTF8::Node *invokeNode = document.allocateNode(Sip::Mapping);
 	invokeNode->setKey("invoice", sizeof("invoice") - 1);
 	invokeNode->setValue("34843");
 	document.appendNode(invokeNode);
 	
-	Sip::YAMLDocumentUTF8::Node *billToNode = document.allocateNode(Sip::MapElement);
+	Sip::YAMLDocumentUTF8::Node *billToNode = document.allocateNode(Sip::Mapping);
 	billToNode->setKey("bill-to", sizeof("bill-to") - 1);
 	document.appendNode(billToNode);
 	
-	Sip::YAMLDocumentUTF8::Node *numberNode = document.allocateNode(Sip::ListElement);
+	Sip::YAMLDocumentUTF8::Node *numberNode = document.allocateNode(Sip::Sequence);
 	numberNode->setValue("300");
 	billToNode->appendNode(numberNode);
 	
